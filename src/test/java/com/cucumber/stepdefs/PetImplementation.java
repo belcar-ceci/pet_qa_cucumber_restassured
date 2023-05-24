@@ -20,6 +20,8 @@ public class PetImplementation {
     private Response putPet = null;
     private Response deletePet = null;
 
+    private Response jsonPathPets = null;
+
     @Before
     public void before(){
         RestAssured.baseURI = "https://petstore.swagger.io/v2/";
@@ -36,7 +38,7 @@ public class PetImplementation {
         assertEquals("The response is not 200", + status,200, postPet.statusCode());
     }
 
-    @Given("the get request that brings us the pets list")
+    @Given("the get request that displays the list of pets")
     public void theResponseGetListPets() {
         getListPet = given().log().all().get("/pet/findByStatus?status=available&status=pending&status=sold");
     }
@@ -64,5 +66,22 @@ public class PetImplementation {
         String jsonPetValidate = jsonPathPets.getString("name");
         assertEquals("The value of the status field is not what is expected",updatedStatus,jsonPetValidate);
 
+    }
+
+    @Given("the following request that delete a pet")
+    public void validatingDeletePets() {
+        deletePet = given().log().all().delete("/11115555");
+    }
+
+    @And("the response is {int} for delete")
+    public void validateResponseDelete() {
+        assertTrue("The response is not 200", putPet.statusCode() == 200);
+    }
+
+    @Then("the body response contains the {string} of the pet delete")
+    public void theBodyResponseContainsTheOfThePetDelete(String message) {
+        JsonPath jsonPathPets = new JsonPath(postPet.body().asString());
+        String jsonUser = jsonPathPets.getString("message");
+        assertEquals("The value of the id field is not what is expected", message, jsonUser);
     }
 }

@@ -22,7 +22,6 @@ public class UserImplementation {
     private Response postUser = null;
     private Response postUsersList = null;
     private Response putUser = null;
-    //private Response jsonPathUser = null;
     private Response getUser = null;
     private Response getLoginUser = null;
     private Response getLogoutUser = null;
