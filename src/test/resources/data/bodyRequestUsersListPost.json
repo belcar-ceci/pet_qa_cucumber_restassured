@@ -1,0 +1,33 @@
+[
+  {
+    "id": 111223,
+    "username": "ladyBug",
+    "firstName": "Jane",
+    "lastName": "Hills",
+    "email": "ladybug@gmail.com",
+    "password": "catblack",
+    "phone": "666666666",
+    "userStatus": 1
+  },
+  {
+    "id": 111224,
+    "username": "prettyWoman",
+    "firstName": "Julia",
+    "lastName": "Roberts",
+    "email": "juliapretty@gmail.com",
+    "password": "catyellow",
+    "phone": "777777777",
+    "userStatus": 0
+  },
+  {
+    "id": 111225,
+    "username": "mariamau",
+    "firstName": "Mariana",
+    "lastName": "Maus",
+    "email": "mariamaus@gmail.com",
+    "password": "catblue",
+    "phone": "888888888",
+    "userStatus": 0
+  }
+
+]

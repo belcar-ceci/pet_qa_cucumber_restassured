@@ -16,7 +16,7 @@ Feature: (e2e) Validate pets
     Given the get request that brings us the pets list
     Then the response is 200 for the get list pet
 
-  @putPet
+  @UpdatePet
   Scenario Outline: (e2e) Validate update a pet
     Given the following put request that update a pet
     And the response is 200 for the put pet
@@ -26,7 +26,7 @@ Feature: (e2e) Validate pets
       | name  |
       | blisa |
 
-  @deletePet
+  @DeletePet
   Scenario: (e2e) Validate delete a pet
     Given the following post request that add one pet
     And the following delete request that delete a pet

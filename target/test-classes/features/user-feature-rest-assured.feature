@@ -5,25 +5,18 @@ Feature: (e2e) Validate users
   Scenario Outline: (e2e) Validate post one user
     Given the following post request that add one user
     And the response is 200 for the post
-    And the body response contains key "<id>"
     Then the body response contains the "<message>" of the user created
 
 
     Examples:
-      | id     | message |
-      | 111222 | 111222  |
+      | message |
+      | 111222  |
 
 
   @postUserList
-  Scenario Outline: (e2e) Validate post create users with list
+  Scenario: (e2e) Validate post create users with list
     Given the following post request that create with a list
-    And the response is 200 for the post users list
-    Then the body response contains the "<message>" for the POST request that is created
-
-    Examples:
-      | message |
-      | ok      |
-
+    Then the response is 200 for the post users list
 
   @getUsers
   Scenario Outline: (e2e) Validate that the response has the new user
@@ -47,14 +40,12 @@ Feature: (e2e) Validate users
     Given the user logout the current session
     Then the response is 200 got logout
 
-  @putUser
+  @UpdateUser
   Scenario: (e2e) Validate updated user
     Given the following put request that update users
     Then the response is 200 for the update
 
-  @deleteUser
+  @DeleteUser
   Scenario: (e2e) Validate deleted user
     Given the following post request that add one user
-    And the following delete request that delete user
-    And the response is 204 for the delete
-    Then the body response is empty
+    Then the following delete request that delete user

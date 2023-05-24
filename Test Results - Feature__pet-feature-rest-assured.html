@@ -572,7 +572,7 @@ jQuery.cookie = function(name, value, options) {
     <body>
         <div id="container">
             <div id="header">
-                <div class="time" xmlns="">8.22 s</div>
+                <div class="time" xmlns="">4.79 s</div>
                 <h1>
                     Feature: pet-feature-rest-assured: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">19 total, </span><span class="failed">4 failed, </span><span class="ignored">4 ignored, </span><span class="passed">11 passed</span></strong>
                 </h1>
@@ -593,57 +593,57 @@ jQuery.cookie = function(name, value, options) {
                 <ul id="tree">
                     <li xmlns="" class="level top failed open">
                         <span><em class="time">
-                                <div class="time">8.22 s</div>
+                                <div class="time">4.79 s</div>
                             </em>Cucumber</span>
                         <ul>
                             <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">8.22 s</div>
+                                        <div class="time">4.79 s</div>
                                     </em>(e2e) Validate pets</span>
                                 <ul>
                                     <li class="level suite failed open">
                                         <span><em class="time">
-                                                <div class="time">5.16 s</div>
+                                                <div class="time">3.48 s</div>
                                             </em>(e2e) Validate post new pet</span>
                                         <ul>
                                             <li class="level suite failed open">
                                                 <span><em class="time">
-                                                        <div class="time">5.16 s</div>
+                                                        <div class="time">3.48 s</div>
                                                     </em>Examples</span>
                                                 <ul>
                                                     <li class="level suite failed open">
                                                         <span><em class="time">
-                                                                <div class="time">5.16 s</div>
+                                                                <div class="time">3.48 s</div>
                                                             </em>Example #1</span>
                                                         <ul>
                                                             <li class="level test">
                                                                 <span><em class="time">
-                                                                        <div class="time">630 ms</div>
+                                                                        <div class="time">442 ms</div>
                                                                     </em><em class="status">passed</em>Before</span>
                                                             </li>
                                                             <li class="level test">
                                                                 <span><em class="time">
-                                                                        <div class="time">2 ms</div>
+                                                                        <div class="time">0 ms</div>
                                                                     </em><em class="status">passed</em>Before</span>
                                                             </li>
                                                             <li class="level test">
                                                                 <span><em class="time">
-                                                                        <div class="time">4.53 s</div>
+                                                                        <div class="time">3.04 s</div>
                                                                     </em><em class="status">passed</em>the following post that add pet</span>
                                                             </li>
                                                             <li class="level test failed open">
                                                                 <span><em class="time">
-                                                                        <div class="time">0 ms</div>
+                                                                        <div class="time">1 ms</div>
                                                                     </em><em class="status">failed</em>the response is 200 for the post pet</span>
                                                                 <ul>
                                                                     <li class="text">
-                                                                        <span class="stderr">Step undefinedYou can implement this step using the snippet(s) below:<br/>@Given("the response is {int} for the post pet")<br/>public void the_response_is_for_the_post_pet(Integer int1) {<br/>    // Write code here that turns the phrase above into concrete actions<br/>    throw new io.cucumber.java.PendingException();<br/>}<br/></span>
+                                                                        <span class="stderr">Step failedio.cucumber.core.exception.CucumberException: Step [the response is 200 for the post pet] is defined with 1 parameters at 'com.cucumber.stepdefs.PetImplementation.the_response_is_for_the_post_pet(int)'.<br/>However, the gherkin step has 0 arguments.<br/>Step text: the response is 200 for the post pet<br/>	at io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:83)<br/>	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)<br/>	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)<br/>	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)<br/>	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br/>	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br/>	at io.cucumber.core.runner.TestCase.run(TestCase.java:95)<br/>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br/>	at io.cucumber.core.runtime.Runtime.lambda$executePickle$6(Runtime.java:128)<br/>	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)<br/>	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br/>	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)<br/>	at io.cucumber.core.runtime.Runtime.lambda$executePickle$7(Runtime.java:128)<br/>	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)<br/>	at java.util.concurrent.FutureTask.run(FutureTask.java:266)<br/>	at io.cucumber.core.runtime.Runtime$SameThreadExecutorService.execute(Runtime.java:249)<br/>	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)<br/>	at io.cucumber.core.runtime.Runtime.lambda$runFeatures$3(Runtime.java:110)<br/>	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)<br/>	at java.util.stream.SliceOps$1$1.accept(SliceOps.java:204)<br/>	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1359)<br/>	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)<br/>	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)<br/>	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)<br/>	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)<br/>	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)<br/>	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)<br/>	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)<br/>	at io.cucumber.core.runtime.Runtime.runFeatures(Runtime.java:111)<br/>	at io.cucumber.core.runtime.Runtime.lambda$run$0(Runtime.java:82)<br/>	at io.cucumber.core.runtime.Runtime.execute(Runtime.java:94)<br/>	at io.cucumber.core.runtime.Runtime.run(Runtime.java:80)<br/>	at io.cucumber.core.cli.Main.run(Main.java:87)<br/>	at io.cucumber.core.cli.Main.main(Main.java:30)<br/></span>
                                                                     </li>
                                                                 </ul>
                                                             </li>
                                                             <li class="level test ignored open">
                                                                 <span><em class="time">
-                                                                        <div class="time">1 ms</div>
+                                                                        <div class="time">0 ms</div>
                                                                     </em><em class="status">ignored</em>the body response contains the "felix" of the pet created</span>
                                                             </li>
                                                         </ul>
@@ -654,7 +654,7 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level suite failed open">
                                         <span><em class="time">
-                                                <div class="time">733 ms</div>
+                                                <div class="time">680 ms</div>
                                             </em>(e2e) Validate that the response of the pets request is 200</span>
                                         <ul>
                                             <li class="level test">
@@ -669,7 +669,7 @@ jQuery.cookie = function(name, value, options) {
                                             </li>
                                             <li class="level test">
                                                 <span><em class="time">
-                                                        <div class="time">731 ms</div>
+                                                        <div class="time">678 ms</div>
                                                     </em><em class="status">passed</em>the get request that brings us the pets list</span>
                                                 <ul>
                                                     <li class="text">
@@ -691,24 +691,19 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level suite failed open">
                                         <span><em class="time">
-                                                <div class="time">2.33 s</div>
+                                                <div class="time">620 ms</div>
                                             </em>(e2e) Validate update a pet</span>
                                         <ul>
                                             <li class="level suite failed open">
                                                 <span><em class="time">
-                                                        <div class="time">2.33 s</div>
+                                                        <div class="time">620 ms</div>
                                                     </em>Examples</span>
                                                 <ul>
                                                     <li class="level suite failed open">
                                                         <span><em class="time">
-                                                                <div class="time">2.33 s</div>
+                                                                <div class="time">620 ms</div>
                                                             </em>Example #1</span>
                                                         <ul>
-                                                            <li class="level test">
-                                                                <span><em class="time">
-                                                                        <div class="time">0 ms</div>
-                                                                    </em><em class="status">passed</em>Before</span>
-                                                            </li>
                                                             <li class="level test">
                                                                 <span><em class="time">
                                                                         <div class="time">1 ms</div>
@@ -716,7 +711,12 @@ jQuery.cookie = function(name, value, options) {
                                                             </li>
                                                             <li class="level test">
                                                                 <span><em class="time">
-                                                                        <div class="time">2.32 s</div>
+                                                                        <div class="time">0 ms</div>
+                                                                    </em><em class="status">passed</em>Before</span>
+                                                            </li>
+                                                            <li class="level test">
+                                                                <span><em class="time">
+                                                                        <div class="time">619 ms</div>
                                                                     </em><em class="status">passed</em>the following put request that update a pet</span>
                                                             </li>
                                                             <li class="level test failed open">
@@ -725,13 +725,13 @@ jQuery.cookie = function(name, value, options) {
                                                                     </em><em class="status">failed</em>the response is 200 for the put pet</span>
                                                                 <ul>
                                                                     <li class="text">
-                                                                        <span class="stderr">Step undefinedYou can implement this step and 1 other step(s) using the snippet(s) below:<br/>@Given("the response is {int} for the put pet")<br/>public void the_response_is_for_the_put_pet(Integer int1) {<br/>    // Write code here that turns the phrase above into concrete actions<br/>    throw new io.cucumber.java.PendingException();<br/>}<br/>@Then("the body response contains update {string}")<br/>public void the_body_response_contains_update(String string) {<br/>    // Write code here that turns the phrase above into concrete actions<br/>    throw new io.cucumber.java.PendingException();<br/>}<br/></span>
+                                                                        <span class="stderr">Step undefinedYou can implement this step using the snippet(s) below:<br/>@Given("the response is {int} for the put pet")<br/>public void the_response_is_for_the_put_pet(Integer int1) {<br/>    // Write code here that turns the phrase above into concrete actions<br/>    throw new io.cucumber.java.PendingException();<br/>}<br/></span>
                                                                     </li>
                                                                 </ul>
                                                             </li>
                                                             <li class="level test ignored open">
                                                                 <span><em class="time">
-                                                                        <div class="time">1 ms</div>
+                                                                        <div class="time">0 ms</div>
                                                                     </em><em class="status">ignored</em>the body response contains update "blisa"</span>
                                                             </li>
                                                         </ul>
@@ -742,12 +742,12 @@ jQuery.cookie = function(name, value, options) {
                                     </li>
                                     <li class="level suite failed open">
                                         <span><em class="time">
-                                                <div class="time">2 ms</div>
+                                                <div class="time">3 ms</div>
                                             </em>(e2e) Validate delete a pet</span>
                                         <ul>
                                             <li class="level test">
                                                 <span><em class="time">
-                                                        <div class="time">1 ms</div>
+                                                        <div class="time">2 ms</div>
                                                     </em><em class="status">passed</em>Before</span>
                                             </li>
                                             <li class="level test">
@@ -785,7 +785,7 @@ jQuery.cookie = function(name, value, options) {
             </div>
         </div>
         <div id="footer">
-            <p>Generated by IntelliJ IDEA on 24/5/23 11:34</p>
+            <p>Generated by IntelliJ IDEA on 24/5/23 13:56</p>
         </div>
     </body>
 </html>
