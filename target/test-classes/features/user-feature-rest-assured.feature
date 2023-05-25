@@ -7,7 +7,6 @@ Feature: (e2e) Validate users
     And the response is 200 for the post
     Then the body response contains the "<message>" of the user created
 
-
     Examples:
       | message |
       | 111222  |
