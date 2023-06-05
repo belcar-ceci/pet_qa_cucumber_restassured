@@ -6,7 +6,6 @@ Feature: (e2e) Validate pets
     Given the following post that add pet
     Then the response is 200 for the post pet
 
-
   @getListPets
   Scenario: (e2e) Validate that the response of the pets list request is 200
     Given the following post request that create with a list

@@ -32,7 +32,6 @@ public class UserImplementation {
         RestAssured.baseURI = "https://petstore.swagger.io/v2/";
     }
 
-    //PostUser
     @Given("the following post request that add one user")
     public void the_following_post_request_that_add_one_user(){
         HashMap<String, String> bodyRequestMap = new HashMap<>();
@@ -60,7 +59,7 @@ public class UserImplementation {
         assertEquals("The value of the id field is not what is expected", message, jsonUser);
 
     }
-    //PostListUser
+
     @Given("the following post request that create with a list")
     public void theFollowingPostRequestThatCreateWithAList() {
         File jsonFile = new File("src/test/resources/data/bodyRequestUsersListPost.json");
@@ -68,44 +67,40 @@ public class UserImplementation {
     }
 
     @Then("the response is {int} for the post users list")
-    public void the_response_is_for_the_post_users_list(int status) {
+    public void theResponseForPostUsersList(int status) {
         assertEquals("The response is not 200", + status,201, postUsersList.statusCode());
     }
 
-    //GetUser
     @Given("the following get request which brings us {string}")
     public void theGetRequestUser(String username) {
         getUser = given().log().all().get("/user/" + username);
     }
 
     @Then("the response is {int} for the get user")
-    public void the_response_is_for_the_get_user(int status){
+    public void theResponseIsForTheGetUser(int status){
         assertEquals("The response is not 200", + status,200, postUsersList.statusCode());
     }
 
-    //UserLogin
     @Given("the user login with {string} and {string}")
     public void theUserLoginWithAnd(String username, String password) {
         getLoginUser = given().log().all().param("username", username).param("password", password).get("/user/login");
     }
 
     @Then("the response is {int} for login")
-    public void the_response_is_for_login(int status) {
+    public void theResponseIsForLogin(int status) {
         assertEquals("The response is not 200", + status,200, getLoginUser.statusCode());
     }
 
-    //UserLogout
     @Given("the user logout the current session")
     public void theUserLogoutSession() {
         getLogoutUser = given().get("/user/logout");
     }
 
     @Then("the response is {int} for logout")
-    public void the_response_is_and_message_is_ok(Integer status) {
+    public void theResponseIsAndMessageIsOk(Integer status) {
         assertEquals("The response is not " + status, 200, getLogoutUser.statusCode());
     }
 
-    //UpdateUser
     @Given("the following put request that update users")
     public void theUserPutSession(){
         the_following_post_request_that_add_one_user();
@@ -120,17 +115,17 @@ public class UserImplementation {
         bodyRequestMapPut.put("password", "catblack");
         bodyRequestMapPut.put("phone", "666666666");
         bodyRequestMapPut.put("userStatus", 1);
-    //DeleteUser
+
         putUser = given().contentType(ContentType.JSON).body(bodyRequestMapPut).put("/user/"+ jsonCreate);
     }
 
-    //UpdateUser
+
     @Then("the response is {int} for the update")
     public void statusCodePutUser(int status) {
         assertEquals("The response is not " + status, 200, putUser.statusCode());
     }
 
-    //DeleteUser
+
     @Then("the following delete request that delete user") //2
     public void theFollowingDeleteRequestThatDeleteUser() {
         JsonPath jsonPathUsers = new JsonPath(postUser.body().asString());
